@@ -18,9 +18,12 @@ import (
 	"github.com/blocktree/go-owaddress/coins/moac"
 	"github.com/blocktree/go-owaddress/coins/nas"
 	"github.com/blocktree/go-owaddress/coins/ont"
+	"github.com/blocktree/go-owaddress/coins/pess"
 	"github.com/blocktree/go-owaddress/coins/qtum"
+	truechain "github.com/blocktree/go-owaddress/coins/true"
 	"github.com/blocktree/go-owaddress/coins/trx"
 	"github.com/blocktree/go-owaddress/coins/tv"
+	"github.com/blocktree/go-owaddress/coins/vcc"
 	"github.com/blocktree/go-owaddress/coins/vds"
 	"github.com/blocktree/go-owaddress/coins/vlx"
 	"github.com/blocktree/go-owaddress/coins/vsys"
@@ -66,4 +69,7 @@ func init() {
 	RegisterAddressVerify(dgb.DefaultStruct, dgb.CoinName)
 	RegisterAddressVerify(alc.DefaultStruct, alc.CoinName)
 	RegisterAddressVerify(eth.DefaultStruct, eth.CoinName)
+	RegisterAddressVerify(pess.DefaultStruct, pess.CoinName)
+	RegisterAddressVerify(vcc.DefaultStruct, vcc.CoinName)
+	RegisterAddressVerify(truechain.DefaultStruct, truechain.CoinName)
 }

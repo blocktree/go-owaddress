@@ -1,13 +1,14 @@
 package test
 
+
 import (
 	"github.com/blocktree/go-owaddress"
 	"testing"
 )
 
-func Test_eth_AddressVerify_Valid(t *testing.T) {
+func Test_true_AddressVerify_Valid(t *testing.T) {
 
-	coin := "eth"
+	coin := "true"
 	expect := true
 
 	Address := "0x1dcbc4eac58965d9d845442df859a2f5434fec7a"
@@ -24,9 +25,9 @@ func Test_eth_AddressVerify_Valid(t *testing.T) {
 }
 
 
-func Test_eth_AddressVerify_InValid(t *testing.T) {
+func Test_true_AddressVerify_InValid(t *testing.T) {
 
-	coin := "eth"
+	coin := "true"
 	expect := false
 
 	Address := "0xldcbc4eac58965d9d845442df859a2f5434fec7a"
@@ -41,3 +42,4 @@ func Test_eth_AddressVerify_InValid(t *testing.T) {
 		t.Error("Failed to verify invalid address")
 	}
 }
+
