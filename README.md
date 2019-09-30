@@ -21,3 +21,9 @@ err   - error : 币种未注册时会返回错误
 5.  在owaddress包的register.go的init方法中完成币种注册
 6.  在test包下完成测试案例的添加
 ```
+
+
+## TODO
+```$xslt
+PIA、EOS、ZDT、BTS、BAR、ARK、AE、DDM、LSK、ALGO、NULS、RISE、SINOC、TGC、ABBC、SERO、GST、BETH
+```
