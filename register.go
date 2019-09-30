@@ -10,6 +10,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/dgb"
 	"github.com/blocktree/go-owaddress/coins/dsc"
 	"github.com/blocktree/go-owaddress/coins/ela"
+	"github.com/blocktree/go-owaddress/coins/eth"
 	"github.com/blocktree/go-owaddress/coins/fiii"
 	"github.com/blocktree/go-owaddress/coins/hc"
 	"github.com/blocktree/go-owaddress/coins/hss"
@@ -64,4 +65,5 @@ func init() {
 	RegisterAddressVerify(zen.DefaultStruct, zen.CoinName)
 	RegisterAddressVerify(dgb.DefaultStruct, dgb.CoinName)
 	RegisterAddressVerify(alc.DefaultStruct, alc.CoinName)
+	RegisterAddressVerify(eth.DefaultStruct, eth.CoinName)
 }
