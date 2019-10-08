@@ -3,6 +3,7 @@ package owaddress
 import (
 	"errors"
 	"reflect"
+	"strings"
 )
 
 func getObject(coin string) (interface{}, error) {
@@ -16,7 +17,7 @@ func getObject(coin string) (interface{}, error) {
 
 func Verify(coin, address string) (bool, error) {
 
-	object, err := getObject(coin)
+	object, err := getObject(strings.ToLower(coin))
 	if err != nil {
 		return false, err
 	}
