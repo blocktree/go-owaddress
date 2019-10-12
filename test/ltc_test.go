@@ -14,7 +14,7 @@ func Test_ltc_AddressVerify_Valid(t *testing.T) {
 	p2pkhAddress := "LiZY38njUbKK5kMTzrdUA8Cq9K8D9HBwKm"
 	p2shAddress := "31nM1cyzC3q8i8AHPK8QDFkLV8ecnuuUCG"
 	bech32Address := "ltc1qqqqqpuwrmhu2k6vr97gsq4lfntyv7w7xxy2nal"
-
+	p2sh2Address := "MKhcngTM1pk9a5z4jb58ZW3t7xFhvMDiDc"
 
 	valid, err := owaddress.Verify(coin, p2pkhAddress)
 
@@ -38,6 +38,12 @@ func Test_ltc_AddressVerify_Valid(t *testing.T) {
 	}
 
 	valid, err = owaddress.Verify(coin, bech32Address)
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	valid, err = owaddress.Verify(coin, p2sh2Address)
 
 	if err != nil {
 		t.Error(err)
