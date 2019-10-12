@@ -25,6 +25,7 @@ func (b AddressVerify) IsValid (address string) bool {
 
 		P2PKHPrefix = byte(0x30)
 		P2SHPrefix = byte(0x05)
+		P2SH2Prefix = byte(0x32)
 		Bech32Prefix = "ltc"
 	)
 
@@ -46,7 +47,7 @@ func (b AddressVerify) IsValid (address string) bool {
 		return false
 	}
 
-	if decodeBytes[0] != P2PKHPrefix && decodeBytes[0] != P2SHPrefix {
+	if decodeBytes[0] != P2PKHPrefix && decodeBytes[0] != P2SHPrefix && decodeBytes[0] != P2SH2Prefix {
 		return false
 	}
 
