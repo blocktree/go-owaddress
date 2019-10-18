@@ -41,7 +41,7 @@ func Test_macc_AddressVerify_Valid(t *testing.T) {
 
 func Test_macc_AddressVerify_InValid(t *testing.T) {
 
-	coin := "g50"
+	coin := "macc"
 	expect := false
 
 	p2pkhAddress := "HNoit5A6uo8h6ueLjySh3iiYFELDg3AkVV"
