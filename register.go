@@ -29,6 +29,7 @@ import (
 	truechain "github.com/blocktree/go-owaddress/coins/true"
 	"github.com/blocktree/go-owaddress/coins/trx"
 	"github.com/blocktree/go-owaddress/coins/tv"
+	"github.com/blocktree/go-owaddress/coins/vas"
 	"github.com/blocktree/go-owaddress/coins/vcc"
 	"github.com/blocktree/go-owaddress/coins/vds"
 	"github.com/blocktree/go-owaddress/coins/vlx"
@@ -86,4 +87,5 @@ func init() {
 	RegisterAddressVerify(ntn.DefaultStruct, ntn.CoinName)
 	RegisterAddressVerify(beth.DefaultStruct, beth.CoinName)
 	RegisterAddressVerify(xwc.DefaultStruct, xwc.CoinName)
+	RegisterAddressVerify(vas.DefaultStruct, vas.CoinName)
 }
