@@ -29,6 +29,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/ntn"
 	"github.com/blocktree/go-owaddress/coins/nuls2"
 	"github.com/blocktree/go-owaddress/coins/ont"
+	"github.com/blocktree/go-owaddress/coins/pb"
 	"github.com/blocktree/go-owaddress/coins/pess"
 	"github.com/blocktree/go-owaddress/coins/qtum"
 	"github.com/blocktree/go-owaddress/coins/rcp"
@@ -104,4 +105,5 @@ func init() {
 	RegisterAddressVerify(sgu.DefaultStruct, sgu.CoinName)
 	RegisterAddressVerify(eva.DefaultStruct, eva.CoinName)
 	RegisterAddressVerify(rcp.DefaultStruct, rcp.CoinName)
+	RegisterAddressVerify(pb.DefaultStruct, pb.CoinName)
 }
