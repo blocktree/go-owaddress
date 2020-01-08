@@ -38,7 +38,7 @@ func (b AddressVerify) IsValid (address string) bool {
 		}
 	}
 
-	check := owcrypt.Hash(decodeBytes[:24], 0, owcrypt.HASh_ALG_DOUBLE_SHA256)[:4]
+	check := owcrypt.Hash(decodeBytes[:24], 0, owcrypt.HASH_ALG_DOUBLE_SHA256)[:4]
 
 	for i := 0; i < 4; i ++ {
 		if check[i] != decodeBytes[24 + i] {

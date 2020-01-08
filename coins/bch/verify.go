@@ -66,7 +66,7 @@ func (b AddressVerify) IsValid (address string) bool {
 		if err != nil || hash[0] != P2PKH_legacy_Prefix {
 			return false
 		}
-		check := owcrypt.Hash(hash[:21], 0, owcrypt.HASh_ALG_DOUBLE_SHA256)[:4]
+		check := owcrypt.Hash(hash[:21], 0, owcrypt.HASH_ALG_DOUBLE_SHA256)[:4]
 		for key, value := range check {
 			if value != hash[21+key] {
 				return false
@@ -82,7 +82,7 @@ func (b AddressVerify) IsValid (address string) bool {
 			return false
 		}
 
-		check := owcrypt.Hash(hash[:21], 0, owcrypt.HASh_ALG_DOUBLE_SHA256)[:4]
+		check := owcrypt.Hash(hash[:21], 0, owcrypt.HASH_ALG_DOUBLE_SHA256)[:4]
 		for key, value := range check {
 			if value != hash[21+key] {
 				return false
@@ -97,7 +97,7 @@ func (b AddressVerify) IsValid (address string) bool {
 			return false
 		}
 
-		check := owcrypt.Hash(hash[:21], 0, owcrypt.HASh_ALG_DOUBLE_SHA256)[:4]
+		check := owcrypt.Hash(hash[:21], 0, owcrypt.HASH_ALG_DOUBLE_SHA256)[:4]
 		for key, value := range check {
 			if value != hash[21+key] {
 				return false
@@ -112,7 +112,7 @@ func (b AddressVerify) IsValid (address string) bool {
 			return false
 		}
 
-		check := owcrypt.Hash(hash[:21], 0, owcrypt.HASh_ALG_DOUBLE_SHA256)[:4]
+		check := owcrypt.Hash(hash[:21], 0, owcrypt.HASH_ALG_DOUBLE_SHA256)[:4]
 		for key, value := range check {
 			if value != hash[21+key] {
 				return false
