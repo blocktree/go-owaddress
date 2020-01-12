@@ -7,7 +7,7 @@ import (
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "atom"
+	CoinName = "ark"
 )
 
 type AddressVerify struct {
