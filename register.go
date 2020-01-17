@@ -108,4 +108,5 @@ func init() {
 	RegisterAddressVerify(rcp.DefaultStruct, rcp.CoinName)
 	RegisterAddressVerify(pb.DefaultStruct, pb.CoinName)
 	RegisterAddressVerify(ark.DefaultStruct, ark.CoinName)
+	RegisterAddressVerify(fac.DefaultStruct, fac.CoinName)
 }

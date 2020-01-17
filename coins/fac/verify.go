@@ -26,7 +26,7 @@ func (b AddressVerify) IsValid (address string) bool {
 		return false
 	}
 
-	
+
 	_, err := hex.DecodeString(address[2:])
 	if err != nil {
 		return false
