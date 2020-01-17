@@ -46,6 +46,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/vsys"
 	"github.com/blocktree/go-owaddress/coins/wicc"
 	"github.com/blocktree/go-owaddress/coins/xrp"
+	"github.com/blocktree/go-owaddress/coins/fac"
 	"github.com/blocktree/go-owaddress/coins/xvg"
 	"github.com/blocktree/go-owaddress/coins/xwc"
 	"github.com/blocktree/go-owaddress/coins/zen"
