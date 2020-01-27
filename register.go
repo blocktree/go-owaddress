@@ -50,6 +50,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/xvg"
 	"github.com/blocktree/go-owaddress/coins/xwc"
 	"github.com/blocktree/go-owaddress/coins/zen"
+	"github.com/blocktree/go-owaddress/coins/nhss"
 	"reflect"
 )
 
@@ -110,4 +111,5 @@ func init() {
 	RegisterAddressVerify(pb.DefaultStruct, pb.CoinName)
 	RegisterAddressVerify(ark.DefaultStruct, ark.CoinName)
 	RegisterAddressVerify(fac.DefaultStruct, fac.CoinName)
+	RegisterAddressVerify(nhss.DefaultStruct, nhss.CoinName)
 }
