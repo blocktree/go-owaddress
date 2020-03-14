@@ -22,6 +22,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/fiii"
 	"github.com/blocktree/go-owaddress/coins/g50"
 	"github.com/blocktree/go-owaddress/coins/hc"
+	"github.com/blocktree/go-owaddress/coins/hns"
 	"github.com/blocktree/go-owaddress/coins/hss"
 	"github.com/blocktree/go-owaddress/coins/ilc"
 	"github.com/blocktree/go-owaddress/coins/ltc"
@@ -117,4 +118,5 @@ func init() {
 	RegisterAddressVerify(ilc.DefaultStruct, ilc.CoinName)
 	RegisterAddressVerify(xif.DefaultStruct, xif.CoinNameXIF)
 	RegisterAddressVerify(xif.DefaultStruct, xif.CoinNameAUSD)
+	RegisterAddressVerify(hns.DefaultStruct, hns.CoinName)
 }
