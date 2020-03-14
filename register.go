@@ -46,6 +46,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/vlx"
 	"github.com/blocktree/go-owaddress/coins/vsys"
 	"github.com/blocktree/go-owaddress/coins/wicc"
+	"github.com/blocktree/go-owaddress/coins/xif"
 	"github.com/blocktree/go-owaddress/coins/xrp"
 	"github.com/blocktree/go-owaddress/coins/fac"
 	"github.com/blocktree/go-owaddress/coins/xvg"
@@ -114,4 +115,6 @@ func init() {
 	RegisterAddressVerify(fac.DefaultStruct, fac.CoinName)
 	RegisterAddressVerify(nhss.DefaultStruct, nhss.CoinName)
 	RegisterAddressVerify(ilc.DefaultStruct, ilc.CoinName)
+	RegisterAddressVerify(xif.DefaultStruct, xif.CoinNameXIF)
+	RegisterAddressVerify(xif.DefaultStruct, xif.CoinNameAUSD)
 }
