@@ -1,9 +1,9 @@
 package btc
 
 import (
-	"github.com/blocktree/go-owaddress/address"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcutil"
+	"github.com/star001007/go-owaddress/address"
 )
 
 // for register

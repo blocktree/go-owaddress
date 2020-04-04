@@ -16,7 +16,7 @@
 package test
 
 import (
-	"github.com/blocktree/go-owaddress"
+	"github.com/star001007/go-owaddress"
 	"testing"
 )
 

@@ -1,8 +1,7 @@
 package test
 
-
 import (
-	"github.com/blocktree/go-owaddress"
+	"github.com/star001007/go-owaddress"
 	"testing"
 )
 
@@ -12,7 +11,6 @@ func Test_xwc_AddressVerify_Valid(t *testing.T) {
 	expect := true
 
 	p2pkhAddress := "XWCNeVn7JSzGQwK1GGMgbk2V3jCbc6x1p7ZAo"
-
 
 	valid, err := owaddress.Verify(coin, p2pkhAddress)
 
@@ -26,14 +24,12 @@ func Test_xwc_AddressVerify_Valid(t *testing.T) {
 
 }
 
-
 func Test_xwc_AddressVerify_InValid(t *testing.T) {
 
 	coin := "xwc"
 	expect := false
 
 	p2pkhAddress := "znkvsEfqqiJ7r9MPiUnoH4bUdkBKDAGx3mm"
-
 
 	valid, err := owaddress.Verify(coin, p2pkhAddress)
 

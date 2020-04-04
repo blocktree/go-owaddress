@@ -1,25 +1,25 @@
 package bnb
 
 import (
-	"github.com/blocktree/go-owaddress/address"
-	"github.com/blocktree/go-owaddress/utils"
+	"github.com/star001007/go-owaddress/address"
+	"github.com/star001007/go-owaddress/utils"
 	"strings"
 )
 
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "bnb"
+	CoinName      = "bnb"
 )
 
 type AddressVerify struct {
 	address.AddressVerify
 }
 
-func (b AddressVerify) IsValid (address string) bool {
-	var(
+func (b AddressVerify) IsValid(address string) bool {
+	var (
 		Alphabet = "qpzry9x8gf2tvdw0s3jn54khce6mua7l"
-		Prefix = "bnb"
+		Prefix   = "bnb"
 	)
 
 	if address == "" {
@@ -37,4 +37,3 @@ func (b AddressVerify) IsValid (address string) bool {
 
 	return false
 }
-

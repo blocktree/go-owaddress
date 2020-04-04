@@ -1,8 +1,7 @@
 package test
 
-
 import (
-	"github.com/blocktree/go-owaddress"
+	"github.com/star001007/go-owaddress"
 	"testing"
 )
 
@@ -24,7 +23,6 @@ func Test_nas_AddressVerify_Valid(t *testing.T) {
 		t.Error("Failed to verify account valid address")
 	}
 
-
 	valid, err = owaddress.Verify(coin, contractAddress)
 
 	if err != nil {
@@ -35,7 +33,6 @@ func Test_nas_AddressVerify_Valid(t *testing.T) {
 		t.Error("Failed to verify contract valid address")
 	}
 }
-
 
 func Test_nas_AddressVerify_InValid(t *testing.T) {
 
@@ -54,7 +51,6 @@ func Test_nas_AddressVerify_InValid(t *testing.T) {
 	if valid != expect {
 		t.Error("Failed to verify account invalid address")
 	}
-
 
 	valid, err = owaddress.Verify(coin, contractAddress)
 

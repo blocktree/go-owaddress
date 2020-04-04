@@ -1,8 +1,7 @@
 package test
 
-
 import (
-	"github.com/blocktree/go-owaddress"
+	"github.com/star001007/go-owaddress"
 	"testing"
 )
 
@@ -14,7 +13,6 @@ func Test_hc_AddressVerify_Valid(t *testing.T) {
 	p2pkhAddress := "HsDCFUx2LzWBuaDjqpZZ9GZcZ9eQEoyuke9"
 	//p2shAddress := "3BYx8ciMdywxd2bbn5h9V7EAZtzLg2RhhX"
 
-
 	valid, err := owaddress.Verify(coin, p2pkhAddress)
 
 	if err != nil {
@@ -24,7 +22,6 @@ func Test_hc_AddressVerify_Valid(t *testing.T) {
 	if valid != expect {
 		t.Error("Failed to verify P2PKH valid address")
 	}
-
 
 	//valid, err = owaddress.Verify(coin, p2shAddress)
 	//
@@ -37,7 +34,6 @@ func Test_hc_AddressVerify_Valid(t *testing.T) {
 	//}
 }
 
-
 func Test_hc_AddressVerify_InValid(t *testing.T) {
 
 	coin := "hc"
@@ -45,7 +41,6 @@ func Test_hc_AddressVerify_InValid(t *testing.T) {
 
 	p2pkhAddress := "HsDCFUx2LzWBuaDjqpZZ9GZcZ9eQEoyuke5"
 	//p2shAddress := "3BYx8ciMdywxd2bbn5h9V7EAZtzLg2R0hX"
-
 
 	valid, err := owaddress.Verify(coin, p2pkhAddress)
 
@@ -56,7 +51,6 @@ func Test_hc_AddressVerify_InValid(t *testing.T) {
 	if valid != expect {
 		t.Error("Failed to verify P2PKH invalid address")
 	}
-
 
 	//valid, err = owaddress.Verify(coin, p2shAddress)
 	//

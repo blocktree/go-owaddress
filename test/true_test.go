@@ -1,8 +1,7 @@
 package test
 
-
 import (
-	"github.com/blocktree/go-owaddress"
+	"github.com/star001007/go-owaddress"
 	"testing"
 )
 
@@ -24,7 +23,6 @@ func Test_true_AddressVerify_Valid(t *testing.T) {
 	}
 }
 
-
 func Test_true_AddressVerify_InValid(t *testing.T) {
 
 	coin := "true"
@@ -42,4 +40,3 @@ func Test_true_AddressVerify_InValid(t *testing.T) {
 		t.Error("Failed to verify invalid address")
 	}
 }
-

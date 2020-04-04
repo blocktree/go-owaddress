@@ -2,32 +2,26 @@ package sgu
 
 import (
 	"fmt"
-	"github.com/blocktree/go-owaddress/address"
+	"github.com/star001007/go-owaddress/address"
 	"strings"
 )
-
 
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "sgu"
+	CoinName      = "sgu"
 )
 
 type AddressVerify struct {
 	address.AddressVerify
 }
 
-func (b AddressVerify) IsValid (address string) bool {
+func (b AddressVerify) IsValid(address string) bool {
 
-	result ,_:= ValidateAddress(address)
+	result, _ := ValidateAddress(address)
 
 	return result
 }
-
-
-
-
-
 
 func AddressToBytes(address string) ([]byte, error) {
 	bytes, err := Decode(address)
@@ -49,7 +43,6 @@ func ValidateAddress(address string) (bool, error) {
 	return Byte2Hex(63) == Hex2Byte(bytes[:1]), nil
 }
 
-
 func Byte2Hex(data byte) string {
 	return fmt.Sprintf("%x", data)
 }
@@ -57,6 +50,3 @@ func Byte2Hex(data byte) string {
 func Hex2Byte(data []byte) string {
 	return strings.ToLower(fmt.Sprintf("%X", data))
 }
-
-
-

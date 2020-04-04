@@ -1,22 +1,22 @@
 package moac
 
 import (
-	"github.com/blocktree/go-owaddress/address"
-	"github.com/blocktree/go-owaddress/utils"
+	"github.com/star001007/go-owaddress/address"
+	"github.com/star001007/go-owaddress/utils"
 	"strings"
 )
 
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "moac"
+	CoinName      = "moac"
 )
 
 type AddressVerify struct {
 	address.AddressVerify
 }
 
-func (b AddressVerify) IsValid (address string) bool {
+func (b AddressVerify) IsValid(address string) bool {
 
 	if address == "" || len(address) != 42 {
 		return false
@@ -32,4 +32,3 @@ func (b AddressVerify) IsValid (address string) bool {
 
 	return true
 }
-

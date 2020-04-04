@@ -1,23 +1,23 @@
 package atom
 
 import (
-	"github.com/blocktree/go-owaddress/address"
-	"github.com/blocktree/go-owaddress/utils"
+	"github.com/star001007/go-owaddress/address"
+	"github.com/star001007/go-owaddress/utils"
 	"strings"
 )
 
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "atom"
+	CoinName      = "atom"
 )
 
 type AddressVerify struct {
 	address.AddressVerify
 }
 
-func (b AddressVerify) IsValid (address string) bool {
-	var(
+func (b AddressVerify) IsValid(address string) bool {
+	var (
 		bech32Alphabet = "qpzry9x8gf2tvdw0s3jn54khce6mua7l"
 
 		Bech32Prefix = "cosmos"

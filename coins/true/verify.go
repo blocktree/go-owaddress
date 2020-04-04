@@ -1,23 +1,22 @@
 package truechain
 
-
 import (
 	"encoding/hex"
-	"github.com/blocktree/go-owaddress/address"
+	"github.com/star001007/go-owaddress/address"
 	"strings"
 )
 
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "true"
+	CoinName      = "true"
 )
 
 type AddressVerify struct {
 	address.AddressVerify
 }
 
-func (b AddressVerify) IsValid (address string) bool {
+func (b AddressVerify) IsValid(address string) bool {
 
 	if address == "" {
 		return false
@@ -34,5 +33,3 @@ func (b AddressVerify) IsValid (address string) bool {
 
 	return true
 }
-
-

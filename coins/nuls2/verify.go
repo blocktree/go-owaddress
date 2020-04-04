@@ -2,7 +2,7 @@ package nuls2
 
 import (
 	"bytes"
-	"github.com/blocktree/go-owaddress/address"
+	"github.com/star001007/go-owaddress/address"
 	"math/big"
 )
 

@@ -1,31 +1,29 @@
 package ilc
 
-
-
 import (
-	"github.com/blocktree/go-owaddress/address"
-	"github.com/blocktree/go-owaddress/utils"
 	"github.com/blocktree/go-owcrypt"
+	"github.com/star001007/go-owaddress/address"
+	"github.com/star001007/go-owaddress/utils"
 	"strings"
 )
 
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "ilc"
+	CoinName      = "ilc"
 )
 
 type AddressVerify struct {
 	address.AddressVerify
 }
 
-func (b AddressVerify) IsValid (address string) bool {
-	var(
+func (b AddressVerify) IsValid(address string) bool {
+	var (
 		base58Alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
 		bech32Alphabet = "qpzry9x8gf2tvdw0s3jn54khce6mua7l"
 
-		P2PKHPrefix = byte(0x00)
-		P2SHPrefix = byte(0x05)
+		P2PKHPrefix  = byte(0x00)
+		P2SHPrefix   = byte(0x05)
 		Bech32Prefix = "bc"
 	)
 
@@ -53,8 +51,8 @@ func (b AddressVerify) IsValid (address string) bool {
 
 	check := owcrypt.Hash(decodeBytes[:21], 0, owcrypt.HASH_ALG_DOUBLE_SHA256)[:4]
 
-	for i := 0; i < 4; i ++ {
-		if check[i] != decodeBytes[21 + i] {
+	for i := 0; i < 4; i++ {
+		if check[i] != decodeBytes[21+i] {
 			return false
 		}
 	}

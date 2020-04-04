@@ -1,8 +1,7 @@
 package test
 
-
 import (
-	"github.com/blocktree/go-owaddress"
+	"github.com/star001007/go-owaddress"
 	"testing"
 )
 
@@ -25,7 +24,6 @@ func Test_ltc_AddressVerify_Valid(t *testing.T) {
 	if valid != expect {
 		t.Error("Failed to verify P2PKH valid address")
 	}
-
 
 	valid, err = owaddress.Verify(coin, p2shAddress)
 
@@ -54,7 +52,6 @@ func Test_ltc_AddressVerify_Valid(t *testing.T) {
 	}
 }
 
-
 func Test_ltc_AddressVerify_InValid(t *testing.T) {
 
 	coin := "ltc"
@@ -63,7 +60,6 @@ func Test_ltc_AddressVerify_InValid(t *testing.T) {
 	p2pkhAddress := "LiZY38njUbKK5kMTzrdUA8Cq9K8D9HBwKp"
 	p2shAddress := "31nM1cyzC3q8i8AHPK8QDFkLV8ecnuuUC4"
 	bech32Address := "ltc1qqqqqpuwrmhu2k6vr97gsq4lfntyv7w7xxy2na7"
-
 
 	valid, err := owaddress.Verify(coin, p2pkhAddress)
 
@@ -74,7 +70,6 @@ func Test_ltc_AddressVerify_InValid(t *testing.T) {
 	if valid != expect {
 		t.Error("Failed to verify P2PKH invalid address")
 	}
-
 
 	valid, err = owaddress.Verify(coin, p2shAddress)
 

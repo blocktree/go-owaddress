@@ -1,8 +1,7 @@
 package test
 
-
 import (
-	"github.com/blocktree/go-owaddress"
+	"github.com/star001007/go-owaddress"
 	"testing"
 )
 
@@ -46,7 +45,6 @@ func Test_hss_AddressVerify_Valid(t *testing.T) {
 	//}
 }
 
-
 func Test_hss_AddressVerify_InValid(t *testing.T) {
 
 	coin := "hss"
@@ -64,7 +62,6 @@ func Test_hss_AddressVerify_InValid(t *testing.T) {
 	if valid != expect {
 		t.Error("Failed to verify P2PKH invalid address")
 	}
-
 
 	//valid, err = owaddress.Verify(coin, p2shAddress)
 	//

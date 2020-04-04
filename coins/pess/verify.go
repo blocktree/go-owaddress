@@ -1,26 +1,25 @@
 package pess
 
-
 import (
 	"bytes"
 	"encoding/base32"
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/blocktree/go-owaddress/address"
+	"github.com/star001007/go-owaddress/address"
 )
 
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "pess"
+	CoinName      = "pess"
 )
 
 type AddressVerify struct {
 	address.AddressVerify
 }
 
-func (b AddressVerify) IsValid (address string) bool {
+func (b AddressVerify) IsValid(address string) bool {
 
 	if address == "" {
 		return false
@@ -41,7 +40,9 @@ const (
 	//VersionByteAccountID is the version byte used for encoded stellar addresses
 	VersionByteAccountID VersionByte = 6 << 3 // Base32-encodes to 'G...'
 )
+
 var ErrInvalidVersionByte = errors.New("invalid version byte")
+
 func decode(expected VersionByte, src string) ([]byte, error) {
 	if err := checkValidVersionByte(expected); err != nil {
 		return nil, err
@@ -72,10 +73,8 @@ func decode(expected VersionByte, src string) ([]byte, error) {
 	return payload, nil
 }
 
-
 // ErrInvalidChecksum is returned when Validate determines either the checksum
 // or the payload has been corrupted
-
 
 var crc16tab = [256]uint16{
 	0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50a5, 0x60c6, 0x70e7,
@@ -143,7 +142,6 @@ func Validate(data []byte, expected []byte) error {
 
 	return nil
 }
-
 
 // checkValidVersionByte returns an error if the provided value
 // is not one of the defined valid version byte constants.

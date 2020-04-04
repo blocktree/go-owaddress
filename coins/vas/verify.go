@@ -1,9 +1,9 @@
 package vas
 
 import (
-	"github.com/blocktree/go-owaddress/address"
-	"github.com/blocktree/go-owaddress/utils"
 	"github.com/blocktree/go-owcrypt"
+	"github.com/star001007/go-owaddress/address"
+	"github.com/star001007/go-owaddress/utils"
 )
 
 // for register

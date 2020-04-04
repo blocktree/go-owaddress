@@ -1,4 +1,4 @@
-module github.com/blocktree/go-owaddress
+module github.com/star001007/go-owaddress
 
 go 1.12
 

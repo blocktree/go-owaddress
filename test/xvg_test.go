@@ -1,8 +1,7 @@
 package test
 
-
 import (
-	"github.com/blocktree/go-owaddress"
+	"github.com/star001007/go-owaddress"
 	"testing"
 )
 
@@ -14,7 +13,6 @@ func Test_xvg_AddressVerify_Valid(t *testing.T) {
 	p2pkhAddress := "DRuujKGrdwpbXDnFv6Ypot576rq3c8MfFx"
 	//p2shAddress := "3BYx8ciMdywxd2bbn5h9V7EAZtzLg2RhhX"
 	//bech32Address := "bc1qvgclzqz7smqr6haag9mknpwsjnxtdqkncr64kd"
-
 
 	valid, err := owaddress.Verify(coin, p2pkhAddress)
 
@@ -48,7 +46,6 @@ func Test_xvg_AddressVerify_Valid(t *testing.T) {
 	//}
 }
 
-
 func Test_xvg_AddressVerify_InValid(t *testing.T) {
 
 	coin := "xvg"
@@ -57,7 +54,6 @@ func Test_xvg_AddressVerify_InValid(t *testing.T) {
 	p2pkhAddress := "DRuujKGrdwpbXDnFv6Ypot576rq3c8MfFF"
 	//p2shAddress := "3BYx8ciMdywxd2bbn5h9V7EAZtzLg2R0hX"
 	//bech32Address := "bc1qvgclzqz7smqr6haag9mknpwsjn3tdqkncr64kd"
-
 
 	valid, err := owaddress.Verify(coin, p2pkhAddress)
 

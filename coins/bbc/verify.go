@@ -3,24 +3,24 @@ package bbc
 import (
 	"encoding/base32"
 	"encoding/binary"
-	"github.com/blocktree/go-owaddress/address"
+	"github.com/star001007/go-owaddress/address"
 	"strings"
 )
 
 // for register
 var (
 	DefaultStruct = &AddressVerify{}
-	CoinName = "bbc"
+	CoinName      = "bbc"
 )
 
 type AddressVerify struct {
 	address.AddressVerify
 }
 
-func (b AddressVerify) IsValid (address string) bool {
-	var(
+func (b AddressVerify) IsValid(address string) bool {
+	var (
 		base32Alphabet = "0123456789abcdefghjkmnpqrstvwxyz"
-		prefix = "1"
+		prefix         = "1"
 	)
 
 	if address == "" {
@@ -33,7 +33,7 @@ func (b AddressVerify) IsValid (address string) bool {
 
 	pubkey, err := base32.NewEncoding(base32Alphabet).DecodeString(address[1:])
 
-	if err != nil || len(pubkey) != 32 + 3 {
+	if err != nil || len(pubkey) != 32+3 {
 		return false
 	}
 
@@ -41,8 +41,8 @@ func (b AddressVerify) IsValid (address string) bool {
 
 	binary.BigEndian.PutUint32(tmp[:], crc24q(pubkey[:32]))
 
-	for i := 0; i < 3; i ++ {
-		if tmp[i+1] != pubkey[32 + i] {
+	for i := 0; i < 3; i++ {
+		if tmp[i+1] != pubkey[32+i] {
 			return false
 		}
 	}
