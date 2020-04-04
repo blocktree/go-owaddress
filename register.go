@@ -17,6 +17,7 @@ import (
 	"github.com/star001007/go-owaddress/coins/dgb"
 	"github.com/star001007/go-owaddress/coins/dsc"
 	"github.com/star001007/go-owaddress/coins/ela"
+	"github.com/star001007/go-owaddress/coins/eos"
 	"github.com/star001007/go-owaddress/coins/eth"
 	"github.com/star001007/go-owaddress/coins/etp"
 	"github.com/star001007/go-owaddress/coins/eva"
@@ -120,4 +121,6 @@ func init() {
 	RegisterAddressVerify(xif.DefaultStruct, xif.CoinNameAUSD)
 	RegisterAddressVerify(hns.DefaultStruct, hns.CoinName)
 	RegisterAddressVerify(kpg.DefaultStruct, kpg.CoinName)
+	RegisterAddressVerify(eos.DefaultStruct, eos.CoinName)
+
 }
