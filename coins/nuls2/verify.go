@@ -2,22 +2,19 @@ package nuls2
 
 import (
 	"bytes"
-	"github.com/star001007/go-owaddress/address"
 	"math/big"
 )
 
 var b58Alphabet = []byte("123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz")
 
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinName      = "nuls2"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
+func (b Verifier) IsValid(address string) bool {
 
 	if address == "" {
 		return false

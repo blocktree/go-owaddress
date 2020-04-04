@@ -2,21 +2,18 @@ package sgu
 
 import (
 	"fmt"
-	"github.com/star001007/go-owaddress/address"
 	"strings"
 )
 
 // for register
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinName      = "sgu"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
+func (b Verifier) IsValid(address string) bool {
 
 	result, _ := ValidateAddress(address)
 

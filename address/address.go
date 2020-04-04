@@ -1,5 +1,5 @@
 package address
 
-type AddressVerify interface {
-	IsValid(coin, address string) bool
+type AddressVerifier interface {
+	IsValid(address string) bool
 }

@@ -1,22 +1,20 @@
 package atom
 
 import (
-	"github.com/star001007/go-owaddress/address"
-	"github.com/star001007/go-owaddress/utils"
 	"strings"
+
+	"github.com/star001007/go-owaddress/utils"
 )
 
 // for register
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinName      = "atom"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
+func (b Verifier) IsValid(address string) bool {
 	var (
 		bech32Alphabet = "qpzry9x8gf2tvdw0s3jn54khce6mua7l"
 

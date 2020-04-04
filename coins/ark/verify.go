@@ -1,20 +1,14 @@
 package ark
 
-import (
-	"github.com/star001007/go-owaddress/address"
-)
-
 // for register
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinName      = "ark"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
+func (b Verifier) IsValid(address string) bool {
 
 	return true
 }

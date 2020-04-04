@@ -3,20 +3,17 @@ package btc
 import (
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcutil"
-	"github.com/star001007/go-owaddress/address"
 )
 
 // for register
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinName      = "btc"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
+func (b Verifier) IsValid(address string) bool {
 	_, err := btcutil.DecodeAddress(address, &chaincfg.MainNetParams)
 	if err != nil {
 		return false

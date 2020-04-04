@@ -1,6 +1,7 @@
 package owaddress
 
 import (
+	"github.com/star001007/go-owaddress/address"
 	"github.com/star001007/go-owaddress/coins/ae"
 	"github.com/star001007/go-owaddress/coins/alc"
 	"github.com/star001007/go-owaddress/coins/ark"
@@ -55,14 +56,12 @@ import (
 	"github.com/star001007/go-owaddress/coins/xvg"
 	"github.com/star001007/go-owaddress/coins/xwc"
 	"github.com/star001007/go-owaddress/coins/zen"
-	"reflect"
 )
 
-var AddressVerifyRegistry = make(map[string]reflect.Type)
+var AddressVerifierRegistry = make(map[string]address.AddressVerifier)
 
-func RegisterAddressVerify(elem interface{}, coin string) {
-	t := reflect.TypeOf(elem).Elem()
-	AddressVerifyRegistry[coin] = t
+func RegisterAddressVerify(verifier address.AddressVerifier, coin string) {
+	AddressVerifierRegistry[coin] = verifier
 }
 
 func init() {

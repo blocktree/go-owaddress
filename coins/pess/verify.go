@@ -6,20 +6,17 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/star001007/go-owaddress/address"
 )
 
 // for register
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinName      = "pess"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
+func (b Verifier) IsValid(address string) bool {
 
 	if address == "" {
 		return false

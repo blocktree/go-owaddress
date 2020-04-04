@@ -2,22 +2,20 @@ package eth
 
 import (
 	"encoding/hex"
-	"github.com/star001007/go-owaddress/address"
 	"strings"
 )
 
+const addressLength = 20
+
 // for register
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinName      = "eth"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
-
+func (b Verifier) IsValid(address string) bool {
 	if address == "" {
 		return false
 	}
@@ -26,8 +24,12 @@ func (b AddressVerify) IsValid(address string) bool {
 		return false
 	}
 
-	_, err := hex.DecodeString(address[2:])
+	addressBytes, err := hex.DecodeString(address[2:])
 	if err != nil {
+		return false
+	}
+
+	if len(addressBytes) != addressLength {
 		return false
 	}
 

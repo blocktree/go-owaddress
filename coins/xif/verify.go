@@ -2,21 +2,18 @@ package xif
 
 import (
 	"encoding/hex"
-	"github.com/star001007/go-owaddress/address"
 )
 
 // for register
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinNameXIF   = "xif"
 	CoinNameAUSD  = "ausd"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
+func (b Verifier) IsValid(address string) bool {
 	pub, err := hex.DecodeString(address)
 	if err != nil {
 		return false

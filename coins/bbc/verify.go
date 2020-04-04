@@ -3,21 +3,18 @@ package bbc
 import (
 	"encoding/base32"
 	"encoding/binary"
-	"github.com/star001007/go-owaddress/address"
 	"strings"
 )
 
 // for register
 var (
-	DefaultStruct = &AddressVerify{}
+	DefaultStruct = &Verifier{}
 	CoinName      = "bbc"
 )
 
-type AddressVerify struct {
-	address.AddressVerify
-}
+type Verifier struct{}
 
-func (b AddressVerify) IsValid(address string) bool {
+func (b Verifier) IsValid(address string) bool {
 	var (
 		base32Alphabet = "0123456789abcdefghjkmnpqrstvwxyz"
 		prefix         = "1"

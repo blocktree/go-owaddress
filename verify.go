@@ -2,31 +2,24 @@ package owaddress
 
 import (
 	"errors"
-	"reflect"
 	"strings"
+
+	"github.com/star001007/go-owaddress/address"
 )
 
-func getObject(coin string) (interface{}, error) {
-	elem, ok  := AddressVerifyRegistry[coin]
+func getVerifier(coin string) (address.AddressVerifier, error) {
+	verifier, ok := AddressVerifierRegistry[coin]
 	if !ok {
 		return nil, errors.New("Coin [" + coin + "] is not registered!")
 	}
 
-	return reflect.New(elem).Elem().Interface(), nil
+	return verifier, nil
 }
 
 func Verify(coin, address string) (bool, error) {
-
-	object, err := getObject(strings.ToLower(coin))
+	verifier, err := getVerifier(strings.ToLower(coin))
 	if err != nil {
 		return false, err
 	}
-
-	input := reflect.ValueOf(&address)
-	input = reflect.Indirect(input)
-	input.SetString(address)
-
-	ret := reflect.ValueOf(object).MethodByName("IsValid").Call([]reflect.Value{input})
-
-	return ret[0].Bool(), nil
+	return verifier.IsValid(address), nil
 }
