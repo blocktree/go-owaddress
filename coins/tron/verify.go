@@ -1,4 +1,4 @@
-package trx
+package tron
 
 import (
 	"github.com/blocktree/go-owcrypt"
