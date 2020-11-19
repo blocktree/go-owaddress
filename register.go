@@ -16,6 +16,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/btx"
 	"github.com/blocktree/go-owaddress/coins/cxc"
 	"github.com/blocktree/go-owaddress/coins/dgb"
+	"github.com/blocktree/go-owaddress/coins/dot"
 	"github.com/blocktree/go-owaddress/coins/dsc"
 	"github.com/blocktree/go-owaddress/coins/ela"
 	"github.com/blocktree/go-owaddress/coins/eth"
@@ -25,7 +26,10 @@ import (
 	"github.com/blocktree/go-owaddress/coins/fiii"
 	"github.com/blocktree/go-owaddress/coins/g50"
 	"github.com/blocktree/go-owaddress/coins/hc"
+	"github.com/blocktree/go-owaddress/coins/hns"
 	"github.com/blocktree/go-owaddress/coins/hss"
+	"github.com/blocktree/go-owaddress/coins/ilc"
+	"github.com/blocktree/go-owaddress/coins/kpg"
 	"github.com/blocktree/go-owaddress/coins/ltc"
 	"github.com/blocktree/go-owaddress/coins/macc"
 	"github.com/blocktree/go-owaddress/coins/moac"
@@ -50,6 +54,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/vlx"
 	"github.com/blocktree/go-owaddress/coins/vsys"
 	"github.com/blocktree/go-owaddress/coins/wicc"
+	"github.com/blocktree/go-owaddress/coins/xif"
 	"github.com/blocktree/go-owaddress/coins/xrp"
 	"github.com/blocktree/go-owaddress/coins/xvg"
 	"github.com/blocktree/go-owaddress/coins/xwc"
@@ -114,5 +119,12 @@ func init() {
 	RegisterAddressVerify(ark.DefaultStruct, ark.CoinName)
 	RegisterAddressVerify(fac.DefaultStruct, fac.CoinName)
 	RegisterAddressVerify(nhss.DefaultStruct, nhss.CoinName)
+	RegisterAddressVerify(ilc.DefaultStruct, ilc.CoinName)
+	RegisterAddressVerify(xif.DefaultStruct, xif.CoinNameXIF)
+	RegisterAddressVerify(xif.DefaultStruct, xif.CoinNameAUSD)
+	RegisterAddressVerify(hns.DefaultStruct, hns.CoinName)
+	RegisterAddressVerify(kpg.DefaultStruct, kpg.CoinName)
+	RegisterAddressVerify(dot.DefaultStruct, dot.CoinNameDOT)
+	RegisterAddressVerify(dot.DefaultStruct, dot.CoinNameKSM)
 	RegisterAddressVerify(ufc.DefaultStruct, ufc.CoinName)
 }
