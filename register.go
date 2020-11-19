@@ -1,6 +1,8 @@
 package owaddress
 
 import (
+	"reflect"
+
 	"github.com/blocktree/go-owaddress/coins/ae"
 	"github.com/blocktree/go-owaddress/coins/alc"
 	"github.com/blocktree/go-owaddress/coins/ark"
@@ -19,6 +21,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/eth"
 	"github.com/blocktree/go-owaddress/coins/etp"
 	"github.com/blocktree/go-owaddress/coins/eva"
+	"github.com/blocktree/go-owaddress/coins/fac"
 	"github.com/blocktree/go-owaddress/coins/fiii"
 	"github.com/blocktree/go-owaddress/coins/g50"
 	"github.com/blocktree/go-owaddress/coins/hc"
@@ -27,6 +30,7 @@ import (
 	"github.com/blocktree/go-owaddress/coins/macc"
 	"github.com/blocktree/go-owaddress/coins/moac"
 	"github.com/blocktree/go-owaddress/coins/nas"
+	"github.com/blocktree/go-owaddress/coins/nhss"
 	"github.com/blocktree/go-owaddress/coins/ntn"
 	"github.com/blocktree/go-owaddress/coins/nuls2"
 	"github.com/blocktree/go-owaddress/coins/ont"
@@ -39,6 +43,7 @@ import (
 	truechain "github.com/blocktree/go-owaddress/coins/true"
 	"github.com/blocktree/go-owaddress/coins/trx"
 	"github.com/blocktree/go-owaddress/coins/tv"
+	"github.com/blocktree/go-owaddress/coins/ufc"
 	"github.com/blocktree/go-owaddress/coins/vas"
 	"github.com/blocktree/go-owaddress/coins/vcc"
 	"github.com/blocktree/go-owaddress/coins/vds"
@@ -46,12 +51,9 @@ import (
 	"github.com/blocktree/go-owaddress/coins/vsys"
 	"github.com/blocktree/go-owaddress/coins/wicc"
 	"github.com/blocktree/go-owaddress/coins/xrp"
-	"github.com/blocktree/go-owaddress/coins/fac"
 	"github.com/blocktree/go-owaddress/coins/xvg"
 	"github.com/blocktree/go-owaddress/coins/xwc"
 	"github.com/blocktree/go-owaddress/coins/zen"
-	"github.com/blocktree/go-owaddress/coins/nhss"
-	"reflect"
 )
 
 var AddressVerifyRegistry = make(map[string]reflect.Type)
@@ -112,4 +114,5 @@ func init() {
 	RegisterAddressVerify(ark.DefaultStruct, ark.CoinName)
 	RegisterAddressVerify(fac.DefaultStruct, fac.CoinName)
 	RegisterAddressVerify(nhss.DefaultStruct, nhss.CoinName)
+	RegisterAddressVerify(ufc.DefaultStruct, ufc.CoinName)
 }
