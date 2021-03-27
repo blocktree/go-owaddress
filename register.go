@@ -10,6 +10,7 @@ import (
 	"github.com/star001007/go-owaddress/coins/bch"
 	"github.com/star001007/go-owaddress/coins/beth"
 	"github.com/star001007/go-owaddress/coins/bnb"
+	"github.com/star001007/go-owaddress/coins/bsc"
 	"github.com/star001007/go-owaddress/coins/bsv"
 	"github.com/star001007/go-owaddress/coins/btc"
 	"github.com/star001007/go-owaddress/coins/btx"
@@ -124,4 +125,5 @@ func init() {
 	RegisterAddressVerify(kpg.DefaultStruct, kpg.CoinName)
 	RegisterAddressVerify(eos.DefaultStruct, eos.CoinName)
 	RegisterAddressVerify(tron.DefaultStruct, tron.CoinName)
+	RegisterAddressVerify(bsc.DefaultStruct, bsc.CoinName)
 }
