@@ -2,10 +2,12 @@ package owaddress
 
 import (
 	"github.com/star001007/go-owaddress/address"
+	"github.com/star001007/go-owaddress/coins/ada"
 	"github.com/star001007/go-owaddress/coins/ae"
 	"github.com/star001007/go-owaddress/coins/alc"
 	"github.com/star001007/go-owaddress/coins/ark"
 	"github.com/star001007/go-owaddress/coins/atom"
+	"github.com/star001007/go-owaddress/coins/avax"
 	"github.com/star001007/go-owaddress/coins/bbc"
 	"github.com/star001007/go-owaddress/coins/bch"
 	"github.com/star001007/go-owaddress/coins/beth"
@@ -24,6 +26,7 @@ import (
 	"github.com/star001007/go-owaddress/coins/eva"
 	"github.com/star001007/go-owaddress/coins/fac"
 	"github.com/star001007/go-owaddress/coins/fiii"
+	"github.com/star001007/go-owaddress/coins/ftm"
 	"github.com/star001007/go-owaddress/coins/g50"
 	"github.com/star001007/go-owaddress/coins/hc"
 	"github.com/star001007/go-owaddress/coins/hns"
@@ -126,4 +129,7 @@ func init() {
 	RegisterAddressVerify(eos.DefaultStruct, eos.CoinName)
 	RegisterAddressVerify(tron.DefaultStruct, tron.CoinName)
 	RegisterAddressVerify(bsc.DefaultStruct, bsc.CoinName)
+	RegisterAddressVerify(ftm.DefaultStruct, ftm.CoinName)
+	RegisterAddressVerify(avax.DefaultStruct, avax.CoinName)
+	RegisterAddressVerify(ada.DefaultStruct, ada.CoinName)
 }
