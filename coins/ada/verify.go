@@ -9,7 +9,7 @@ const addressLength = 20
 // for register
 var (
 	DefaultStruct = &Verifier{}
-	CoinName      = "CARDANO"
+	CoinName      = "cardano"
 )
 
 type Verifier struct{}
