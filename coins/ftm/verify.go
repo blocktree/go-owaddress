@@ -10,7 +10,7 @@ const addressLength = 20
 // for register
 var (
 	DefaultStruct = &Verifier{}
-	CoinName      = "ftm"
+	CoinName      = "FANTOM"
 )
 
 type Verifier struct{}
