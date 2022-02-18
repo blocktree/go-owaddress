@@ -18,8 +18,5 @@ func (b Verifier) IsValid(address string) bool {
 	if address == "" {
 		return false
 	}
-	if strings.Index(address, "addr") != 0 {
-		return false
-	}
 	return true
 }
