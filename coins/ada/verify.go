@@ -1,9 +1,5 @@
 package ada
 
-import (
-	"strings"
-)
-
 const addressLength = 20
 
 // for register
@@ -16,9 +12,6 @@ type Verifier struct{}
 
 func (b Verifier) IsValid(address string) bool {
 	if address == "" {
-		return false
-	}
-	if strings.Index(address, "addr") != 0 {
 		return false
 	}
 	return true
