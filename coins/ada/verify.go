@@ -1,9 +1,5 @@
 package ada
 
-import (
-	"strings"
-)
-
 const addressLength = 20
 
 // for register

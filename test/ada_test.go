@@ -25,14 +25,10 @@ func Test_ada_AddressVerify_Valid(t *testing.T) {
 }
 
 func Test_ada_AddressVerify_InValid(t *testing.T) {
-
 	coin := ada.CoinName
 	expect := false
-
-	Address := "saddr1w9jx45flh83z6wuqypyash54mszwmdj8r64fydafxtfc6jgrw4rm3"
-
+	Address := ""
 	valid, err := owaddress.Verify(coin, Address)
-
 	if err != nil {
 		t.Error(err)
 	}
