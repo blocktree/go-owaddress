@@ -47,6 +47,7 @@ import (
 	"github.com/star001007/go-owaddress/coins/rcp"
 	"github.com/star001007/go-owaddress/coins/sgu"
 	"github.com/star001007/go-owaddress/coins/sinoc"
+	"github.com/star001007/go-owaddress/coins/sol"
 	"github.com/star001007/go-owaddress/coins/tron"
 	truechain "github.com/star001007/go-owaddress/coins/true"
 	"github.com/star001007/go-owaddress/coins/trx"
@@ -132,4 +133,5 @@ func init() {
 	RegisterAddressVerify(ftm.DefaultStruct, ftm.CoinName)
 	RegisterAddressVerify(avax.DefaultStruct, avax.CoinName)
 	RegisterAddressVerify(ada.DefaultStruct, ada.CoinName)
+	RegisterAddressVerify(sol.DefaultStruct, sol.CoinName)
 }
